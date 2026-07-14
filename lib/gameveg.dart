@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import 'loadeveg.dart';
@@ -31,7 +32,16 @@ class _GameWebViewState extends State<GameWebView> {
   InAppWebViewController? _controller;
   bool _isLoading = true;
   double _progress = 0;
+@override
+  void initState() {
+    // TODO: implement initState
 
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+    super.initState();
+  }
   // Основные настройки InAppWebView.
   final InAppWebViewSettings _settings = InAppWebViewSettings(
     // JS и хранилища
