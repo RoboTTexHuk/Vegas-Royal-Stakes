@@ -37,8 +37,8 @@ class _GameWebViewState extends State<GameWebView> {
     // TODO: implement initState
 
   SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
   ]);
     super.initState();
   }
